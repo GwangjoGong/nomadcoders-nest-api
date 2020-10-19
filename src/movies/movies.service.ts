@@ -28,7 +28,7 @@ export class MoviesService {
 
   delete(movieId: number) {
     this.getOne(movieId);
-    this.movies.filter(movie => movie.id !== movieId);
+    this.movies = this.movies.filter(movie => movie.id !== movieId);
   }
 
   patch(movieId: number, updateData: UpdateMovieDto) {

@@ -15,4 +15,11 @@ describe('AppController', () => {
   it('should be defined', () => {
     expect(controller).toBeDefined();
   });
+
+  describe('home', () => {
+    it('should return welcome message', () => {
+      const message = controller.home();
+      expect(message).toEqual('Welcome to my Movie API!');
+    });
+  });
 });
